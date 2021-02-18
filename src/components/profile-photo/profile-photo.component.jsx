@@ -56,6 +56,7 @@ const ProfilePhoto = ({photos}) => {
         //failCounter equal to all the photos show default Avatar
         if(failCounter === photosLength){
             e.target.src = Avatar;
+            setLoading(false);
             return
         }
         //if not increase the index and get the other priority photo
@@ -66,7 +67,6 @@ const ProfilePhoto = ({photos}) => {
     const handleImageLoaded = (e) => {
         setLoading(false);
         setFailCounter(0);
-        console.log('I was called')
     }
 
 
