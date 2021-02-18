@@ -1,0 +1,37 @@
+.photo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.photo{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.photo__img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    max-height: 100%;
+}
+
+.next-photo-btn{
+    margin-top: 0.5rem;
+    background: var(--clr-primary);
+    color:#fff;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    border-color: transparent;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.next-photo-btn:hover{
+    background: var(--clr-primary-dark);
+}

@@ -20,6 +20,7 @@ export default function useFetch(url) {
     const FETCH_SUCCESS = 'FETCH_SUCCESS';
     const FETCH_ERROR = 'FETCH_ERROR';
 
+    //creating reducer to update the state on different actions
     const [state,dispatch] = useReducer((state,action) => {
         switch(action.type){
             case FETCH_START:
@@ -41,8 +42,10 @@ export default function useFetch(url) {
             try{
                 const response = await fetch(url);
                 const data = await response.json();
+                //updating the state with the fetched data
                 dispatch({type:FETCH_SUCCESS,payload:data});
             }catch(error){
+                //updating the state with the error
                 dispatch({type:FETCH_ERROR,payload:error});
             }
         }
