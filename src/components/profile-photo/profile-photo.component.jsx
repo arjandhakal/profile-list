@@ -46,7 +46,7 @@ const ProfilePhoto = ({photos}) => {
     return (
         <div className='photo-container'>
            <div className="photo">
-                <img src={url} alt="" className="photo__img" onError={setDefault}/>
+                <img src={url} alt="profile image " className="photo__img" onError={setDefault}/>
             </div>
             <span className="photo-source"><em>Source: </em> {sourceIcons[source] || '😵'}</span>
            <button className="next-photo-btn" onClick={nextPhoto}>Next Photo</button>
